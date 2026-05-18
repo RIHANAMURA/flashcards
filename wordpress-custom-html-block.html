@@ -1,0 +1,371 @@
+<section id="office20-flashcards" class="o20-flashcards">
+  <div class="o20-app">
+    <header class="o20-header">
+      <h2>職場英語フレーズカード10</h2>
+      <p>U.S. Workplace English Flashcards | Office20 Free Sample</p>
+    </header>
+
+    <div class="o20-progress" aria-live="polite">
+      <span id="o20-counter">1 / 10</span>
+      <div class="o20-track" aria-hidden="true"><div id="o20-bar" class="o20-bar"></div></div>
+    </div>
+
+    <div class="o20-card-shell">
+      <article id="o20-card" class="o20-card">
+        <div class="o20-face o20-front">
+          <div id="o20-front-category" class="o20-category">確認</div>
+          <div id="o20-front-text" class="o20-prompt">少し確認させてください。</div>
+        </div>
+        <div class="o20-face o20-back">
+          <div id="o20-back-category" class="o20-category">確認</div>
+          <div id="o20-back-text" class="o20-answer">Let me make sure I understand.</div>
+          <div id="o20-nuance" class="o20-note"></div>
+          <div id="o20-example" class="o20-example"></div>
+        </div>
+      </article>
+    </div>
+
+    <nav class="o20-actions" aria-label="Flashcard controls">
+      <button id="o20-prev" type="button">前へ</button>
+      <button id="o20-flip" class="o20-primary" type="button">答えを見る</button>
+      <button id="o20-next" type="button">次へ</button>
+    </nav>
+
+    <p class="o20-upsell">
+      もっと練習したい方へ: 有料版「職場英語フレーズカード100」準備中
+    </p>
+  </div>
+</section>
+
+<style>
+  .o20-flashcards {
+    color: #10233f;
+    background:
+      radial-gradient(circle at 12% 12%, rgba(103, 199, 243, 0.22), transparent 28%),
+      radial-gradient(circle at 88% 86%, rgba(155, 215, 91, 0.2), transparent 30%),
+      linear-gradient(135deg, #f7fbff, #ffffff);
+    padding: 32px 18px;
+    border-radius: 12px;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
+
+  .o20-flashcards * {
+    box-sizing: border-box;
+  }
+
+  .o20-app {
+    width: min(100%, 820px);
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+  }
+
+  .o20-header {
+    display: grid;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .o20-header h2 {
+    margin: 0;
+    color: #10233f;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .o20-header p {
+    margin: 0;
+    color: #38516f;
+    font-size: clamp(15px, 2.5vw, 18px);
+    font-weight: 700;
+  }
+
+  .o20-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: #38516f;
+    font-weight: 800;
+  }
+
+  .o20-track {
+    flex: 1;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: rgba(31, 93, 158, 0.12);
+  }
+
+  .o20-bar {
+    width: 10%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #1f5d9e, #6ebf45);
+    transition: width 240ms ease;
+  }
+
+  .o20-card-shell {
+    perspective: 1400px;
+  }
+
+  .o20-card {
+    position: relative;
+    min-height: 430px;
+    transform-style: preserve-3d;
+    transition: transform 420ms ease;
+    cursor: pointer;
+  }
+
+  .o20-card.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .o20-face {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-content: center;
+    gap: 22px;
+    padding: clamp(28px, 5vw, 54px);
+    border: 2px solid rgba(31, 93, 158, 0.14);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 24px 60px rgba(16, 35, 63, 0.14);
+    backface-visibility: hidden;
+  }
+
+  .o20-back {
+    transform: rotateY(180deg);
+  }
+
+  .o20-category {
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(31, 93, 158, 0.1);
+    color: #1f5d9e;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .o20-prompt,
+  .o20-answer {
+    color: #10233f;
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.2;
+    font-weight: 950;
+    letter-spacing: 0;
+  }
+
+  .o20-answer {
+    color: #1f5d9e;
+    font-size: clamp(30px, 5vw, 50px);
+    line-height: 1.12;
+  }
+
+  .o20-note,
+  .o20-example {
+    color: #38516f;
+    font-size: clamp(17px, 2.6vw, 22px);
+    line-height: 1.45;
+    font-weight: 720;
+  }
+
+  .o20-example {
+    padding-left: 18px;
+    border-left: 5px solid #6ebf45;
+    color: #10233f;
+    font-weight: 760;
+  }
+
+  .o20-actions {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 12px;
+  }
+
+  .o20-actions button {
+    min-height: 54px;
+    border: 0;
+    border-radius: 8px;
+    padding: 0 16px;
+    background: #ffffff;
+    color: #10233f;
+    box-shadow: 0 12px 26px rgba(16, 35, 63, 0.1);
+    font: 900 16px/1 system-ui, sans-serif;
+    cursor: pointer;
+  }
+
+  .o20-actions button.o20-primary {
+    background: linear-gradient(90deg, #1f5d9e, #6ebf45);
+    color: #ffffff;
+  }
+
+  .o20-actions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+
+  .o20-upsell {
+    margin: 0;
+    text-align: center;
+    color: #38516f;
+    font-weight: 800;
+  }
+
+  @media (max-width: 640px) {
+    .o20-flashcards {
+      padding: 22px 12px;
+    }
+
+    .o20-card {
+      min-height: 460px;
+    }
+
+    .o20-actions {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  (() => {
+    const root = document.querySelector("#office20-flashcards");
+    if (!root) return;
+
+    const cards = [
+      {
+        category: "確認",
+        front: "少し確認させてください。",
+        back: "Let me make sure I understand.",
+        nuance: "相手を否定せず、自分の理解を確認する自然な言い方です。",
+        example: "Let me make sure I understand. You’d like the report by Friday, correct?",
+      },
+      {
+        category: "確認",
+        front: "もう少し詳しく教えていただけますか。",
+        back: "Could you give me a little more context?",
+        nuance: "背景情報を求める丁寧でプロフェッショナルな表現です。",
+        example: "Could you give me a little more context before I update the document?",
+      },
+      {
+        category: "確認",
+        front: "念のため確認します。",
+        back: "Just to confirm,",
+        nuance: "メールやチャットの冒頭で使いやすい表現です。",
+        example: "Just to confirm, the meeting starts at 10 a.m. Eastern time.",
+      },
+      {
+        category: "優先順位",
+        front: "優先順位を確認したいです。",
+        back: "I’d like to clarify the priority.",
+        nuance: "どの仕事を先に進めるべきか確認するときに便利です。",
+        example:
+          "I’d like to clarify the priority so I can focus on the most urgent task first.",
+      },
+      {
+        category: "締切",
+        front: "いつまでに必要ですか。",
+        back: "When do you need this by?",
+        nuance: "締切を自然に確認する表現です。",
+        example: "When do you need this by? I want to make sure I plan my time correctly.",
+      },
+      {
+        category: "対応",
+        front: "すぐに対応します。",
+        back: "I’ll take care of it right away.",
+        nuance: "責任感を持って対応することが伝わる表現です。",
+        example: "Thanks for letting me know. I’ll take care of it right away.",
+      },
+      {
+        category: "保留",
+        front: "少し時間をいただけますか。",
+        back: "Could I have a little time to look into it?",
+        nuance: "すぐに答えられないときに確認時間をもらう表現です。",
+        example:
+          "Could I have a little time to look into it? I want to give you an accurate answer.",
+      },
+      {
+        category: "進捗報告",
+        front: "現時点での状況を共有します。",
+        back: "Here’s a quick update on where things stand.",
+        nuance: "進捗報告の冒頭に使える自然な表現です。",
+        example: "Here’s a quick update on where things stand with the client presentation.",
+      },
+      {
+        category: "フィードバック",
+        front: "ご指摘ありがとうございます。",
+        back: "Thank you for pointing that out.",
+        nuance: "指摘を前向きに受け止める表現です。",
+        example: "Thank you for pointing that out. I’ll correct it and send an updated version.",
+      },
+      {
+        category: "次の行動",
+        front: "次のステップを確認しましょう。",
+        back: "Let’s align on the next steps.",
+        nuance: "会議の終わりやプロジェクトの区切りで使える表現です。",
+        example: "Before we wrap up, let’s align on the next steps.",
+      },
+    ];
+
+    let index = 0;
+    let flipped = false;
+
+    const card = root.querySelector("#o20-card");
+    const counter = root.querySelector("#o20-counter");
+    const bar = root.querySelector("#o20-bar");
+    const frontCategory = root.querySelector("#o20-front-category");
+    const backCategory = root.querySelector("#o20-back-category");
+    const frontText = root.querySelector("#o20-front-text");
+    const backText = root.querySelector("#o20-back-text");
+    const nuance = root.querySelector("#o20-nuance");
+    const example = root.querySelector("#o20-example");
+    const prev = root.querySelector("#o20-prev");
+    const next = root.querySelector("#o20-next");
+    const flip = root.querySelector("#o20-flip");
+
+    function render() {
+      const item = cards[index];
+      frontCategory.textContent = item.category;
+      backCategory.textContent = item.category;
+      frontText.textContent = item.front;
+      backText.textContent = item.back;
+      nuance.textContent = item.nuance;
+      example.textContent = item.example;
+      counter.textContent = `${index + 1} / ${cards.length}`;
+      bar.style.width = `${((index + 1) / cards.length) * 100}%`;
+      card.classList.toggle("is-flipped", flipped);
+      flip.textContent = flipped ? "問題に戻る" : "答えを見る";
+      prev.disabled = index === 0;
+      next.disabled = index === cards.length - 1;
+    }
+
+    flip.addEventListener("click", () => {
+      flipped = !flipped;
+      render();
+    });
+
+    card.addEventListener("click", () => {
+      flipped = !flipped;
+      render();
+    });
+
+    prev.addEventListener("click", () => {
+      index = Math.max(0, index - 1);
+      flipped = false;
+      render();
+    });
+
+    next.addEventListener("click", () => {
+      index = Math.min(cards.length - 1, index + 1);
+      flipped = false;
+      render();
+    });
+
+    render();
+  })();
+</script>
