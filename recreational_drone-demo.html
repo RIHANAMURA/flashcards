@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【無料デモ】アメリカ レク用ドローン英語カード | Office20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4efe6; --ink:#1f3a36; --ink-soft:#4a635f; --line:#d8cfbe;
+  --accent:#c4673b; --accent-soft:#e8d3c3; --known:#4f7d5a; --card:#fffdf8;
+  --weak:#b04a3a; --shadow:rgba(31,58,54,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Zen Kaku Gothic New","Newsreader",serif;
+  background:
+    radial-gradient(circle at 12% 8%, #faf6ee 0%, transparent 42%),
+    radial-gradient(circle at 88% 92%, #efe6d6 0%, transparent 46%),
+    var(--paper);
+  color:var(--ink);min-height:100vh;padding:24px 16px 64px;
+}
+.wrap{max-width:680px;margin:0 auto}
+header{text-align:center;margin-bottom:20px}
+.brand{font-family:"Newsreader",serif;font-style:italic;font-size:14px;letter-spacing:.14em;color:var(--ink-soft)}
+h1{font-size:22px;font-weight:700;margin-top:6px}
+h1 small{display:block;font-size:12px;font-weight:400;color:var(--ink-soft);margin-top:4px;letter-spacing:.06em}
+.chara{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 4px 18px var(--shadow);padding:16px 18px;margin-bottom:18px;
+  display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center}
+.chara-fig{width:96px;height:96px;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 60%, #fdf8ee 0%, #f1e8d7 100%);
+  border:1px solid var(--line);border-radius:50%}
+.chara-fig svg{width:72px;height:72px}
+.chara-fig.pop svg{animation:pop .5s ease}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.18) rotate(-4deg)}100%{transform:scale(1)}}
+.chara-meta .name{font-weight:700;font-size:16px}
+.chara-meta .title-badge{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--ink);
+  border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:2px;letter-spacing:.05em}
+.lvl-row{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-soft);margin-top:8px}
+.xpbar{height:10px;background:#eee4d2;border-radius:999px;overflow:hidden;margin-top:4px;border:1px solid var(--line)}
+.xpbar i{display:block;height:100%;background:linear-gradient(90deg,var(--known),#7aa886);border-radius:999px;transition:width .5s ease}
+.stage-note{font-size:11px;color:var(--ink-soft);margin-top:6px}
+.cat-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;
+  background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:3px 12px;margin-bottom:10px}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 4px 18px var(--shadow);padding:26px 22px;text-align:center;
+  min-height:190px;display:flex;flex-direction:column;justify-content:center;cursor:pointer}
+.q-ja{font-size:17px;font-weight:500;line-height:1.7}
+.q-en{font-family:"Newsreader",serif;font-size:21px;line-height:1.5;margin-top:4px}
+.q-note{font-size:12px;color:var(--ink-soft);margin-top:10px;line-height:1.6}
+.q-hint{font-size:12px;color:var(--ink-soft);margin-top:14px}
+.judge{display:none;gap:12px;margin-top:14px;justify-content:center}
+.judge.show{display:flex}
+.judge button{flex:1;max-width:200px;font-family:inherit;font-size:15px;font-weight:700;
+  padding:13px 8px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:transform .1s}
+.judge button:active{transform:scale(.97)}
+.btn-ok{background:var(--known);color:#fff;border-color:var(--known)}
+.btn-ng{background:#fff;color:var(--weak);border-color:var(--weak)}
+.streak{min-height:22px;text-align:center;font-size:13px;font-weight:700;color:var(--accent);margin-top:10px}
+.stats{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 4px 18px var(--shadow);padding:18px;margin-top:22px}
+.stats h2{font-size:15px;margin-bottom:12px}
+.srow{display:grid;grid-template-columns:8em 1fr 3.5em;gap:10px;align-items:center;font-size:13px;margin-bottom:8px}
+.sbar{height:8px;background:#eee4d2;border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+.sbar i{display:block;height:100%;background:var(--known);border-radius:999px;transition:width .4s}
+.sbar i.low{background:var(--weak)}
+.srate{text-align:right;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.weak-box{margin-top:14px;padding:14px;border:1px dashed var(--weak);border-radius:12px;background:#fdf5f2;font-size:13px;line-height:1.7;display:none}
+.weak-box.show{display:block}
+.weak-box b{color:var(--weak)}
+.cta{margin-top:22px;text-align:center;background:var(--ink);color:#f4efe6;
+  border-radius:16px;padding:24px 20px;box-shadow:0 6px 22px var(--shadow)}
+.cta p{font-size:13px;line-height:1.8;opacity:.9}
+.cta .cta-btn{display:inline-block;margin-top:14px;background:var(--accent);color:#fff;
+  font-weight:700;font-size:15px;text-decoration:none;border-radius:999px;padding:13px 34px;transition:opacity .15s}
+.cta .cta-btn:hover{opacity:.88}
+.reset{display:block;margin:26px auto 0;background:none;border:none;color:var(--ink-soft);
+  font-family:inherit;font-size:12px;text-decoration:underline;cursor:pointer}
+footer{text-align:center;font-size:11px;color:var(--ink-soft);margin-top:30px}
+@media (max-width:480px){.chara{grid-template-columns:76px 1fr}
+  .chara-fig{width:76px;height:76px}.chara-fig svg{width:58px;height:58px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand" id="brand"></div>
+  <h1 id="mainTitle"><small id="subtitle"></small></h1>
+</header>
+
+<section class="chara" aria-label="育成キャラクター">
+  <div class="chara-fig" id="figWrap"><svg id="figSvg" viewBox="0 0 100 100" role="img" aria-label="育成キャラクター"></svg></div>
+  <div class="chara-meta">
+    <span class="name" id="stageName"></span>
+    <span class="title-badge" id="titleBadge"></span>
+    <div class="lvl-row"><span id="lvlText">Lv.1</span><span id="xpText"></span></div>
+    <div class="xpbar"><i id="xpFill" style="width:0%"></i></div>
+    <div class="stage-note" id="stageNote"></div>
+  </div>
+</section>
+
+<section aria-label="フラッシュカード">
+  <span class="cat-tag" id="catTag"></span>
+  <div class="qcard" id="qcard" tabindex="0">
+    <div class="q-ja" id="qJa"></div>
+    <div class="q-en" id="qEn" style="display:none"></div>
+    <div class="q-note" id="qNote" style="display:none"></div>
+    <div class="q-hint" id="qHint">タップして英語表現を表示</div>
+  </div>
+  <div class="judge" id="judge">
+    <button class="btn-ok" id="btnOk">◯ 言えた(+10 XP)</button>
+    <button class="btn-ng" id="btnNg">✕ 言えなかった(+3 XP)</button>
+  </div>
+  <div class="streak" id="streak"></div>
+</section>
+
+<section class="stats" aria-label="場面別成績">
+  <h2>カテゴリ別の正解率</h2>
+  <div id="statRows"></div>
+  <div class="weak-box" id="weakBox"></div>
+</section>
+
+<section class="cta" id="ctaBox" style="display:none">
+  <p id="ctaCopy"></p>
+  <a class="cta-btn" id="ctaBtn" href="#" target="_blank" rel="noopener"></a>
+</section>
+
+<button class="reset" id="resetBtn">成績とキャラをリセットする</button>
+<footer>© Office20 — Bridging Japan &amp; U.S. workplaces</footer>
+</div>
+
+<script>
+/* ==== 設定(build-demo.jsが注入) ==== */
+const CFG = {"title":"アメリカ レク用ドローン英語カード","brand":"OFFICE20 · RECREATIONAL DRONE IN THE U.S.","subtitle":"週末の公園フライトからTRUST合格まで、これ1つで","cats":{"rules":"基本ルール・TRUST","airspace":"空域・飛行場所","safety":"安全・マナー","trouble":"トラブル対応"},"stages":["格納箱","トイドローン","クアッドコプター","FPVエース"],"titles":["見習いフライヤー","週末パイロット","公園の達人","レクドローンマスター"],"storageKey":"office20_recdrone_growth_v1","deck":[{"cat":"rules","ja":"「TRUST証明は全員に必要?」","en":"The TRUST certificate is required for all recreational flyers.","note":"無料オンライン試験。合格証は再発行不可、紛失時は再受験"},{"cat":"rules","ja":"「TRUSTはどこで受けられる?」","en":"You can take TRUST online for free through an FAA-approved administrator.","note":"不合格がない形式。その場で誤答を修正して合格まで進む"},{"cat":"rules","ja":"「証明書を携帯していますか?」と聞かれたら","en":"Yes, I have my TRUST certificate right here.","note":"電子・紙どちらも可。求められたら提示する法的義務あり"},{"cat":"rules","ja":"「登録が必要な機体の重さは?」","en":"Drones weighing 250 grams or more must be registered.","note":"0.55lb=250g。レクは1つの登録番号を全機に使い回せる"},{"cat":"rules","ja":"「登録の費用と有効期間は?」","en":"Registration costs $5 and is valid for 3 years.","note":"FAADroneZoneで登録。Part 107と違い機体ごとでなく人単位"},{"cat":"airspace","ja":"「管制空域で飛ぶには?」","en":"I need authorization before flying in controlled airspace.","note":"Class B/C/D/E地表。LAANCで事前承認を取る"},{"cat":"airspace","ja":"「LAANCとは?」","en":"LAANC gives near real-time authorization through approved apps.","note":"承認アプリから無料・数秒で取得。レク飛行も利用可"},{"cat":"airspace","ja":"「飛行可否はどう確認する?」","en":"I check the airspace with an FAA-approved app before flying.","note":"B4UFLYサービスはAloft等の公認アプリに統合されている"},{"cat":"airspace","ja":"「ここは飛ばせる場所?」と聞かれたら","en":"Let me check the airspace map first.","note":"感覚でなくアプリで確認する姿勢を英語でも示す"},{"cat":"airspace","ja":"「Class G空域とは?」","en":"Class G is uncontrolled airspace where no authorization is needed.","note":"レク飛行の基本フィールド。400ft制限は適用される"},{"cat":"safety","ja":"「人の上を飛ばせる?」","en":"I don't fly over people.","note":"レク飛行には人の上空飛行の例外規定がない"},{"cat":"safety","ja":"「走っている車の上は?」","en":"Never fly over moving vehicles.","note":"事故誘発リスク。ハイウェイ沿いの撮影は特に注意"},{"cat":"safety","ja":"「飛行前に何を点検する?」","en":"I check the propellers, battery, and GPS signal before takeoff.","note":"プロペラのクラックとバッテリー膨張が二大チェック項目"},{"cat":"safety","ja":"「RTH(自動帰還)の設定は?」","en":"I set the return-to-home altitude above nearby obstacles.","note":"帰還高度を周囲の木・建物より高く。初心者事故の典型"},{"cat":"safety","ja":"「風が強い日の判断は?」","en":"I don't fly when winds are stronger than my drone can handle.","note":"小型機は15mph程度が実用限界の目安"},{"cat":"trouble","ja":"「警察に声をかけられたら?」","en":"Good afternoon, officer. I'm flying recreationally under FAA rules.","note":"冷静に+法的根拠を提示。まず機体を着陸させる"},{"cat":"trouble","ja":"「許可はあるのか?」と聞かれたら","en":"I have my TRUST certificate and registration right here.","note":"2点セットを即提示できる準備が最強の防御"},{"cat":"trouble","ja":"「ここは禁止だ」と言われたら","en":"I understand. I'll land right away and check the local rules.","note":"その場で法律論争をしない。着陸→確認→後日判断"},{"cat":"trouble","ja":"「今すぐやめろ」と言われたら","en":"No problem, I'm bringing it down now.","note":"従いつつ状況をメモ。正当性の確認は後からで良い"},{"cat":"trouble","ja":"「隣人からうるさいと苦情が来たら?」","en":"I'm sorry it bothered you. I'll fly further from your property.","note":"謝罪+具体的な行動変更をセットで伝える"}],"cta":{"url":"https://office20.gumroad.com/l/recdrone","text":"完全版100枚を見る →","copy":"このデモは全100枚のうち<strong>20枚</strong>の抜粋です。<br>弱点カテゴリを含む完全版100枚で、現場で詰まらない力に。"}};
+
+/* ==== 進化キャラSVG(4段階・汎用) ==== */
+const FIGS=[
+`<g><ellipse cx="50" cy="58" rx="26" ry="32" fill="#fdf3dc" stroke="#c9b88f" stroke-width="2"/>
+  <path d="M30 58 l8 6 8-6 8 6 8-6 8 6" fill="none" stroke="#c9b88f" stroke-width="2" stroke-linecap="round"/></g>`,
+`<g><ellipse cx="50" cy="62" rx="24" ry="22" fill="#f6d35e" stroke="#caa72e" stroke-width="2"/>
+  <circle cx="50" cy="40" r="16" fill="#f6d35e" stroke="#caa72e" stroke-width="2"/>
+  <circle cx="44" cy="38" r="2.4" fill="#1f3a36"/><circle cx="56" cy="38" r="2.4" fill="#1f3a36"/>
+  <polygon points="50,42 46,47 54,47" fill="#e08a3c"/>
+  <path d="M36 84 l4-8 M64 84 l-4-8" stroke="#e08a3c" stroke-width="3" stroke-linecap="round"/></g>`,
+`<g><ellipse cx="50" cy="58" rx="26" ry="20" fill="#8fb6c9" stroke="#4a7e97" stroke-width="2"/>
+  <circle cx="66" cy="42" r="12" fill="#8fb6c9" stroke="#4a7e97" stroke-width="2"/>
+  <circle cx="70" cy="40" r="2.2" fill="#1f3a36"/>
+  <polygon points="78,42 88,44 78,47" fill="#e0a23c"/>
+  <path d="M30 56 q-14-10 -6-22 q10 4 14 14" fill="#bcd5e0" stroke="#4a7e97" stroke-width="2"/>
+  <path d="M42 78 l0 6 M56 78 l0 6" stroke="#4a7e97" stroke-width="3" stroke-linecap="round"/></g>`,
+`<g><ellipse cx="50" cy="58" rx="24" ry="20" fill="#e0703c" stroke="#a33f1c" stroke-width="2"/>
+  <circle cx="50" cy="36" r="13" fill="#e0703c" stroke="#a33f1c" stroke-width="2"/>
+  <circle cx="45" cy="34" r="2.2" fill="#fff"/><circle cx="55" cy="34" r="2.2" fill="#fff"/>
+  <polygon points="50,38 46,43 54,43" fill="#f2b23c"/>
+  <path d="M26 54 q-16-16 -2-28 M74 54 q16-16 2-28" fill="none" stroke="#f2b23c" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 78 q-8 12 0 16 q8-4 0-16" fill="#f2b23c" stroke="#a33f1c" stroke-width="2"/>
+  <path d="M22 26 l3 5 M78 26 l-3 5 M50 12 l0 6" stroke="#f2b23c" stroke-width="3" stroke-linecap="round"/></g>`
+];
+/* ドローンテーマ用SVG(stages名に"ドローン"等が含まれる場合に自動切替) */
+const FIGS_DRONE=[
+`<g><rect x="28" y="40" width="44" height="30" rx="6" fill="#d8cfbe" stroke="#9a8f78" stroke-width="2"/>
+  <rect x="40" y="34" width="20" height="8" rx="3" fill="#c9bda5" stroke="#9a8f78" stroke-width="2"/>
+  <circle cx="50" cy="55" r="4" fill="#9a8f78"/></g>`,
+`<g><rect x="40" y="48" width="20" height="12" rx="4" fill="#8fb6c9" stroke="#4a7e97" stroke-width="2"/>
+  <path d="M40 52 L26 42 M60 52 L74 42" stroke="#4a7e97" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="24" cy="40" rx="9" ry="2.5" fill="#bcd5e0" stroke="#4a7e97" stroke-width="1.5"/>
+  <ellipse cx="76" cy="40" rx="9" ry="2.5" fill="#bcd5e0" stroke="#4a7e97" stroke-width="1.5"/>
+  <circle cx="47" cy="54" r="1.6" fill="#1f3a36"/><circle cx="53" cy="54" r="1.6" fill="#1f3a36"/></g>`,
+`<g><rect x="38" y="46" width="24" height="14" rx="5" fill="#4f7d5a" stroke="#2f5c3a" stroke-width="2"/>
+  <circle cx="50" cy="53" r="4.5" fill="#dfeee3" stroke="#2f5c3a" stroke-width="1.5"/>
+  <path d="M38 50 L20 38 M62 50 L80 38 M38 58 L20 70 M62 58 L80 70" stroke="#2f5c3a" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="18" cy="36" rx="8" ry="2.4" fill="#a8c9b0" stroke="#2f5c3a" stroke-width="1.5"/>
+  <ellipse cx="82" cy="36" rx="8" ry="2.4" fill="#a8c9b0" stroke="#2f5c3a" stroke-width="1.5"/>
+  <ellipse cx="18" cy="72" rx="8" ry="2.4" fill="#a8c9b0" stroke="#2f5c3a" stroke-width="1.5"/>
+  <ellipse cx="82" cy="72" rx="8" ry="2.4" fill="#a8c9b0" stroke="#2f5c3a" stroke-width="1.5"/></g>`,
+`<g><rect x="36" y="44" width="28" height="16" rx="6" fill="#e0703c" stroke="#a33f1c" stroke-width="2"/>
+  <rect x="43" y="48" width="14" height="8" rx="2" fill="#1f3a36"/>
+  <circle cx="50" cy="52" r="2.4" fill="#f2b23c"/>
+  <path d="M36 48 L18 34 M64 48 L82 34 M36 58 L18 72 M64 58 L82 72" stroke="#a33f1c" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="16" cy="32" rx="9" ry="2.6" fill="#f2b23c" stroke="#a33f1c" stroke-width="1.5"/>
+  <ellipse cx="84" cy="32" rx="9" ry="2.6" fill="#f2b23c" stroke="#a33f1c" stroke-width="1.5"/>
+  <ellipse cx="16" cy="74" rx="9" ry="2.6" fill="#f2b23c" stroke="#a33f1c" stroke-width="1.5"/>
+  <ellipse cx="84" cy="74" rx="9" ry="2.6" fill="#f2b23c" stroke="#a33f1c" stroke-width="1.5"/>
+  <path d="M46 36 l4-6 4 6" fill="none" stroke="#f2b23c" stroke-width="2" stroke-linecap="round"/></g>`
+];
+const isDrone=/ドローン|コプター|FPV|パイロット/.test(CFG.stages.join(""));
+const FIGSET=isDrone?FIGS_DRONE:FIGS;
+
+/* ==== 成長モデル(固定) ==== */
+const STAGE_MIN=[0,80,200,400];
+const TITLE_MIN=[0,.5,.7,.85];
+const XP_OK=10, XP_NG=3, XP_STREAK=5;
+
+/* ==== 状態 ==== */
+let S=load();
+function load(){
+  try{const raw=localStorage.getItem(CFG.storageKey);if(raw)return JSON.parse(raw);}catch(e){}
+  return {xp:0,streak:0,order:shuffleIdx(),pos:0,
+    stats:Object.fromEntries(Object.keys(CFG.cats).map(k=>[k,{ok:0,ng:0}]))};
+}
+function save(){try{localStorage.setItem(CFG.storageKey,JSON.stringify(S));}catch(e){}}
+function shuffleIdx(){const a=[...CFG.deck.keys()];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* ==== 描画 ==== */
+const el=id=>document.getElementById(id);
+let flipped=false;
+function currentCard(){return CFG.deck[S.order[S.pos%S.order.length]];}
+function renderHeader(){
+  el("brand").textContent=CFG.brand;
+  el("mainTitle").insertAdjacentText("afterbegin",CFG.title+" × 育成モード");
+  el("subtitle").textContent=CFG.subtitle;
+  if(CFG.cta){el("ctaBox").style.display="block";
+    el("ctaCopy").innerHTML=CFG.cta.copy;
+    el("ctaBtn").href=CFG.cta.url;el("ctaBtn").textContent=CFG.cta.text;}
+}
+function renderCard(){
+  const c=currentCard();flipped=false;
+  el("catTag").textContent=CFG.cats[c.cat];
+  el("qJa").textContent=c.ja;
+  el("qEn").textContent=c.en;el("qEn").style.display="none";
+  el("qNote").textContent=c.note||"";el("qNote").style.display="none";
+  el("qHint").textContent="タップして英語表現を表示";
+  el("judge").classList.remove("show");
+}
+function flip(){
+  if(flipped)return;flipped=true;
+  el("qEn").style.display="block";
+  if(currentCard().note)el("qNote").style.display="block";
+  el("qHint").textContent="声に出して言えましたか?";
+  el("judge").classList.add("show");
+}
+function answer(ok){
+  const c=currentCard();
+  const st=S.stats[c.cat];ok?st.ok++:st.ng++;
+  let gain=ok?XP_OK:XP_NG;
+  if(ok){S.streak++;if(S.streak%3===0){gain+=XP_STREAK;toast(`🔥 ${S.streak}連続正解! ボーナス +${XP_STREAK} XP`);}else{toast("");}}
+  else{S.streak=0;toast("");}
+  const prev=stageOf(S.xp);
+  S.xp+=gain;S.pos++;
+  if(S.pos%S.order.length===0)S.order=shuffleIdx();
+  save();renderCard();renderChara(prev);renderStats();
+}
+function toast(m){el("streak").textContent=m;}
+function stageOf(xp){let s=0;STAGE_MIN.forEach((m,i)=>{if(xp>=m)s=i;});return s;}
+function renderChara(prev){
+  const si=stageOf(S.xp);
+  el("figSvg").innerHTML=FIGSET[si];
+  el("stageName").textContent=CFG.stages[si];
+  el("stageNote").textContent=si===0?"カードに正解してXPを貯めると進化します":
+    (si<3?"順調に成長中。連続正解でボーナスXP":"最終進化。もう現場で詰まりません");
+  const base=STAGE_MIN[si],cap=STAGE_MIN[si+1]||base+200;
+  el("xpFill").style.width=Math.min(100,Math.round((S.xp-base)/(cap-base)*100))+"%";
+  el("xpText").textContent=STAGE_MIN[si+1]?`${S.xp} / ${cap} XP`:`${S.xp} XP (MAX)`;
+  el("lvlText").textContent="Lv."+(Math.floor(S.xp/40)+1);
+  const t=totals();let title=CFG.titles[0];
+  if(t.n>=5){const acc=t.ok/t.n;TITLE_MIN.forEach((m,i)=>{if(acc>=m)title=CFG.titles[i];});}
+  el("titleBadge").textContent=title;
+  if(prev!==undefined&&si>prev){
+    const w=el("figWrap");w.classList.remove("pop");void w.offsetWidth;w.classList.add("pop");
+    toast(`✨ ${CFG.stages[si]}に進化しました!`);
+  }
+}
+function totals(){let ok=0,n=0;Object.values(S.stats).forEach(s=>{ok+=s.ok;n+=s.ok+s.ng;});return{ok,n};}
+function renderStats(){
+  const rows=el("statRows");rows.innerHTML="";
+  let weakest=null;
+  Object.entries(CFG.cats).forEach(([k,label])=>{
+    const s=S.stats[k],n=s.ok+s.ng,rate=n?s.ok/n:null;
+    const row=document.createElement("div");row.className="srow";
+    const pct=rate===null?0:Math.round(rate*100);
+    row.innerHTML=`<span>${label}</span>
+      <span class="sbar"><i class="${rate!==null&&rate<.6?"low":""}" style="width:${pct}%"></i></span>
+      <span class="srate">${rate===null?"—":pct+"%"}</span>`;
+    rows.appendChild(row);
+    if(n>=3&&(weakest===null||rate<weakest.rate))weakest={label,rate};
+  });
+  const box=el("weakBox");
+  if(CFG.cta&&weakest&&weakest.rate<.7){
+    box.classList.add("show");
+    box.innerHTML=`あなたの弱点は <b>「${weakest.label}」</b> です(正解率 ${Math.round(weakest.rate*100)}%)。<br>完全版には「${weakest.label}」の実戦カードが多数収録されています。`;
+  }else{box.classList.remove("show");}
+}
+el("qcard").addEventListener("click",flip);
+el("qcard").addEventListener("keydown",e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();flip();}});
+el("btnOk").addEventListener("click",()=>answer(true));
+el("btnNg").addEventListener("click",()=>answer(false));
+el("resetBtn").addEventListener("click",()=>{
+  if(confirm("成績とキャラの成長をリセットしますか?")){localStorage.removeItem(CFG.storageKey);S=load();renderCard();renderChara();renderStats();toast("");}
+});
+renderHeader();renderCard();renderChara();renderStats();
+</script>
+</body>
+</html>
